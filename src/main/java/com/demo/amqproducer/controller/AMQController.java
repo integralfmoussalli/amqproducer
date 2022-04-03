@@ -1,5 +1,4 @@
 package com.demo.amqproducer.controller;
-//https://camel.apache.org/manual/producertemplate.html
 
 import com.demo.amqproducer.model.SampleMessage;
 import com.demo.amqproducer.model.SampleResponse;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+//https://camel.apache.org/manual/producertemplate.html
 @RestController
 public class AMQController {
 
