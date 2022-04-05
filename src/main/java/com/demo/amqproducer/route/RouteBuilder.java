@@ -14,9 +14,9 @@ public class RouteBuilder extends org.apache.camel.builder.RouteBuilder {
 
     @Override
     public void configure() {
-        from("direct:requestMessage")
+        from("direct:requestMessage").routeId("producerRoute")
                 .marshal(stringFormat)
-                .to("activemq:queue:sendMessageQueue").setExchangePattern(ExchangePattern.InOut)
+                .to("activemq:queue:sendMessageQueue").setExchangePattern(ExchangePattern.InOut).id("consumerID")
                 .unmarshal(jsonFormat)
                 .log("${body}")
                 .end();

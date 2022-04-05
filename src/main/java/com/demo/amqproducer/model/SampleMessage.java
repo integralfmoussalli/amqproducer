@@ -1,28 +1,14 @@
 package com.demo.amqproducer.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class SampleMessage {
     String name;
     String colour;
 
-    @Override
-    public String toString() {
-        return "MessageResponse{" +
-                "Name='" + name + '\'' +
-                ", Title='" + colour + '\'' +
-                '}';
-    }
-
-    public SampleMessage(){
-    }
-
-    public SampleMessage(String name, String colour) {
-        this.name = name;
-        this.colour = colour;
-    }
 }

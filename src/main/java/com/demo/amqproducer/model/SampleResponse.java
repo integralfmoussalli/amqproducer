@@ -1,23 +1,13 @@
 package com.demo.amqproducer.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class SampleResponse {
 
     String response;
-
-    public SampleResponse(String response) {
-        this.response = response;
-    }
-
-    public SampleResponse() {
-    }
-
-
-
-
 }
